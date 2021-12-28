@@ -6,7 +6,6 @@ export 'package:cloud_firestore/cloud_firestore.dart';
 export 'package:firebase_storage/firebase_storage.dart';
 export 'package:flutter_bloc/flutter_bloc.dart';
 //creative_packages
-export 'package:creative_theme/creative_theme.dart';
 export 'package:creative_space_between/creative_space_between.dart';
 
 export 'package:creative_padding/creative_padding.dart';
