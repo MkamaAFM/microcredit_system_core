@@ -27,6 +27,7 @@ dependencies:
   creative_padding:
     git:
       url: https://github.com/MkamaAFM/creative_padding
+  email_validator: ^2.0.1
 
 dev_dependencies:
   flutter_test:
