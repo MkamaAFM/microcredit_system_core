@@ -3,7 +3,6 @@ import 'package:meta/meta.dart';
 import 'package:microcredit_system_core/objects/user.dart';
 import 'package:microcredit_system_core/repos/auth.dart';
 
-
 part 'auth_event.dart';
 part 'auth_state.dart';
 
