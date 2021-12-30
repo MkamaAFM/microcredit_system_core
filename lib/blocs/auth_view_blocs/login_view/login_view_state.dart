@@ -1,35 +1,40 @@
 part of 'login_view_bloc.dart';
 
 @immutable
-abstract class LoginViewState {
-  final String password, contactCredential;
-  final bool showPassword, activeValidator;
-  bool get isEmailAddress => EmailValidator.validate(contactCredential);
-  bool get isPhoneNumber => validPhoneNumber(contactCredential);
-  bool get validPassword => f.validPassword(password);
-  bool get validContactCredential => isEmailAddress || isPhoneNumber;
-  bool get canLogin => (isEmailAddress && validPassword) || isPhoneNumber;
-  const LoginViewState.initial()
-      : password = '',
-        contactCredential = '',
-        showPassword = false,
-        activeValidator = false;
+abstract class LoginViewState extends AuthViewState {
+  const LoginViewState(
+      {required String password,
+      required String contactCredential,
+      required bool showPassword,
+      required bool activeValidator})
+      : super(
+            password: password,
+            contactCredential: contactCredential,
+            showPassword: showPassword,
+            activeValidator: activeValidator);
+
+  @override
+  bool get canContinue => (isEmailAddress && validPassword) || isPhoneNumber;
 
   LoginViewState.copyWith(LoginViewState state,
       {String? password,
       String? contactCredential,
       bool? showPassword,
-      bool? loggingIn,
-      bool? activeValidator,
-      bool? activeButtons})
-      : password = password ?? state.password,
-        contactCredential = contactCredential ?? state.contactCredential,
-        showPassword = showPassword ?? state.showPassword,
-        activeValidator = activeValidator ?? state.activeValidator;
+      bool? activeValidator})
+      : super(
+            password: password ?? state.password,
+            contactCredential: contactCredential ?? state.contactCredential,
+            showPassword: showPassword ?? state.showPassword,
+            activeValidator: activeValidator ?? state.activeValidator);
 }
 
 class InitialState extends LoginViewState {
-  const InitialState() : super.initial();
+  const InitialState()
+      : super(
+            activeValidator: false,
+            password: '',
+            showPassword: false,
+            contactCredential: '');
 }
 
 class PasswordUpdated extends LoginViewState {

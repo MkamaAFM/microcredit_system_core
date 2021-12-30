@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:microcredit_system_core/blocs/login_view/login_view_bloc.dart';
-import '../../microcredit_system_core.dart';
+import 'package:microcredit_system_core/blocs/auth_view_blocs/login_view/login_view_bloc.dart';
+import '../../../microcredit_system_core.dart';
 import '../in_button_progress_indicator.dart';
 part 'desktop.dart';
 part 'mobile.dart';

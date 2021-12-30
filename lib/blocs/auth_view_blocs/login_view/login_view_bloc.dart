@@ -1,9 +1,7 @@
 import 'package:bloc/bloc.dart';
-import 'package:email_validator/email_validator.dart';
 import 'package:meta/meta.dart';
 import 'package:microcredit_system_core/blocs/auth/auth_bloc.dart';
-import 'package:microcredit_system_core/functions/phone_number_validator.dart';
-import 'package:microcredit_system_core/functions/password_validator.dart' as f;
+import 'package:microcredit_system_core/blocs/auth_view_blocs/auth_view_state.dart';
 
 part 'login_view_event.dart';
 part 'login_view_state.dart';
@@ -23,7 +21,7 @@ class LoginViewBloc extends Bloc<LoginViewEvent, LoginViewState> {
   }
 
   void _onLoginAttempt(Emitter<LoginViewState> emit) {
-    if (state.canLogin) {
+    if (state.canContinue) {
       _authBloc.add(state.isEmailAddress
           ? EmailSignInEvent(state.contactCredential, state.password)
           : PhoneSignInEvent(state.contactCredential));
