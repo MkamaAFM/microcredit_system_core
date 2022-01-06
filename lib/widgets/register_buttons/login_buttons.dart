@@ -1,8 +1,4 @@
-import 'package:creative_flutter/constants/padding_values.dart';
-import 'package:creative_flutter/functions/responsive_value.dart';
-import 'package:creative_flutter/widgets/creative_space_between.dart';
-import 'package:creative_flutter/widgets/in_button_progress_indicator.dart';
-import 'package:creative_flutter/widgets/responsive_widget.dart';
+import 'package:creative_flutter/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:microcredit_system_core/blocs/auth_view_blocs/login_view/login_view_bloc.dart';
 import '../../../microcredit_system_core.dart';
