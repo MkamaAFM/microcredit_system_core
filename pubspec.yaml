@@ -1,6 +1,6 @@
 name: microcredit_system_core
 description: A new Flutter package project.
-version: 0.0.5
+version: 0.0.7
 homepage:
 
 environment:
@@ -18,15 +18,9 @@ dependencies:
   creative_theme:
     git:
       url: https://github.com/MkamaAFM/creative_theme
-  creative_space_between:
+  creative_flutter:
     git:
-      url: https://github.com/MkamaAFM/creative_space_between
-  creative_responsive_values:
-    git:
-      url: https://github.com/MkamaAFM/creative_responsive_values
-  creative_padding:
-    git:
-      url: https://github.com/MkamaAFM/creative_padding
+      url: https://github.com/MkamaAFM/creative_flutter
   email_validator: ^2.0.1
 
 dev_dependencies:
