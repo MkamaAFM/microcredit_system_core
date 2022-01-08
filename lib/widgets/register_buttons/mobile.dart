@@ -1,20 +1,19 @@
-part of 'login_buttons.dart';
+part of 'register_buttons.dart';
 
-class _Mobile extends _LoginButtons {
-  const _Mobile(
-      {Key? key,
-      required String loginButtonText,
-      required Widget loginButtonIcon,
-      void Function()? login,
-      void Function()? register,
-      void Function()? resetPassword})
-      : super(
-            key: key,
-            loginButtonText: loginButtonText,
-            loginButtonIcon: loginButtonIcon,
-            login: login,
-            register: register,
-            resetPassword: resetPassword);
+class _Mobile extends _RegisterButtons {
+  const _Mobile({
+    Key? key,
+    required String registerButtonText,
+    required Widget registerButtonIcon,
+    void Function()? login,
+    void Function()? register,
+  }) : super(
+          key: key,
+          registerButtonText: registerButtonText,
+          registerButtonIcon: registerButtonIcon,
+          login: login,
+          register: register,
+        );
 
   @override
   Widget build(BuildContext context) {
@@ -25,15 +24,9 @@ class _Mobile extends _LoginButtons {
         SizedBox(
           width: double.infinity,
           child: ElevatedButton.icon(
-              icon: loginButtonIcon,
+              icon: registerButtonIcon,
               onPressed: login,
-              label: Text(loginButtonText)),
-        ),
-        const CreativeSpaceBetween(),
-        SizedBox(
-          width: double.infinity,
-          child: OutlinedButton(
-              onPressed: resetPassword, child: const Text('Reset password')),
+              label: Text(registerButtonText)),
         ),
         const CreativeSpaceBetween(times: .5),
         SizedBox(

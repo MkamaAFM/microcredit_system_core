@@ -21,3 +21,5 @@ class WriteConfirmPassword extends RegisterViewEvent {
 }
 
 class ChangePasswordVisibility extends RegisterViewEvent{}
+
+class RegisterAttempt extends RegisterViewEvent{}
