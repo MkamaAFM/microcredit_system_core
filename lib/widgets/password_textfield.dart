@@ -37,7 +37,7 @@ class PasswordTextField extends StatelessWidget {
         icon: Icon(showPassword
             ? Icons.visibility_off_outlined
             : Icons.visibility_outlined),
-        onPressed: !enabled ? null : () => changePasswordVisibility,
+        onPressed: !enabled ? null : changePasswordVisibility,
       ),
       maxLines: 1,
     );

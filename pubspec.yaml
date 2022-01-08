@@ -1,6 +1,6 @@
 name: microcredit_system_core
 description: A new Flutter package project.
-version: 0.0.11
+version: 0.0.12
 homepage:
 
 environment:
@@ -22,11 +22,14 @@ dependencies:
     git:
       url: https://github.com/MkamaAFM/creative_flutter
   email_validator: ^2.0.1
+  auto_route: ^3.2.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^1.0.0
+  auto_route_generator: ^3.2.1
+  build_runner: ^2.1.7
 
 publish_to: none
 # For information on the generic Dart part of this file, see the
