@@ -14,7 +14,10 @@ abstract class LoginViewState extends AuthViewState {
             activeValidator: activeValidator);
 
   @override
-  bool get canContinue => (isEmailAddress && validPassword) || isPhoneNumber;
+  bool get canContinue =>
+      (credentialInputType == ContactCredentialInputType.email &&
+          validPassword) ||
+      credentialInputType == ContactCredentialInputType.phone;
 
   LoginViewState.copyWith(LoginViewState state,
       {String? password,

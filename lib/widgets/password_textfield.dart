@@ -8,7 +8,7 @@ class PasswordTextField extends StatelessWidget {
       activeValidator,
       validPassword,
       showPassword;
-  final String initialValue, validatorText;
+  final String initialValue;
   const PasswordTextField({
     Key? key,
     required this.changePasswordVisibility,
@@ -18,7 +18,6 @@ class PasswordTextField extends StatelessWidget {
     required this.validPassword,
     required this.showPassword,
     required this.initialValue,
-    required this.validatorText,
   }) : super(key: key);
 
   @override

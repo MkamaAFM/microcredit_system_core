@@ -2,6 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:microcredit_system_core/blocs/auth/auth_bloc.dart';
 import 'package:microcredit_system_core/blocs/auth_view_blocs/auth_view_state.dart';
+import 'package:microcredit_system_core/widgets/contact_credential_textfield.dart';
 
 part 'login_view_event.dart';
 part 'login_view_state.dart';
@@ -22,9 +23,10 @@ class LoginViewBloc extends Bloc<LoginViewEvent, LoginViewState> {
 
   void _onLoginAttempt(Emitter<LoginViewState> emit) {
     if (state.canContinue) {
-      _authBloc.add(state.isEmailAddress
-          ? EmailSignInEvent(state.contactCredential, state.password)
-          : PhoneSignInEvent(state.contactCredential));
+      _authBloc.add(
+          state.credentialInputType == ContactCredentialInputType.email
+              ? EmailSignInEvent(state.contactCredential, state.password)
+              : PhoneSignInEvent(state.contactCredential));
     } else {
       emit(InvalidCredentials(state));
     }
